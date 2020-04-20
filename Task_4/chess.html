@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>chess.html</title>
+	<style type="text/css">
+		h1{
+			text-align: center;
+		}
+		table{
+			margin: auto;
+			border:2px solid black;
+			border-collapse: collapse;
+		}
+		body{
+			background-color: cyan;
+		}
+		tr:nth-child(odd) td:nth-child(even){
+        background-color: rgba(0,0,0,0.5);
+		}
+		tr:nth-child(even) td:nth-child(odd){
+			background-color: rgba(0,0,0,0.5);
+		}
+	 td{
+			background-color: white;
+        width: 48px;
+        height: 48px;
+        border-collapse: collapse;
+		}
+		.twoBlack td{
+background-image: url(chess.png);
+		}
+		.black td{
+			background-image: url(chess.png);
+		}
+		.black td:nth-child(2){
+			background-position: -97px 0px;
+		}
+				.black td:nth-child(3){
+			background-position: -194px 0px;
+		}
+				.black td:nth-child(4){
+			background-position: -143px 0px;
+		}
+				.black td:nth-child(5){
+			background-position: -48px 0px;
+		}
+				.black td:nth-child(6){
+			background-position: 0px 0px;
+		}
+				.black td:nth-child(7){
+			background-position: -143px 0px;
+		}
+				.black td:nth-child(8){
+			background-position: -194px 0px;
+		}
+				.black td:nth-child(9){
+			background-position: -97px 0px;
+		}
+
+		.twoBlack td:nth-child(2){
+			background-position: -240px 0px;
+		}
+				.twoBlack td:nth-child(3){
+			background-position: -240px 0px;
+		}
+				.twoBlack td:nth-child(4){
+			background-position: -240px 0px;
+		}
+				.twoBlack td:nth-child(5){
+			background-position: -240px 0px;
+		}
+				.twoBlack td:nth-child(6){
+			background-position: -240px 0px;
+		}
+				.twoBlack td:nth-child(7){
+			background-position: -240px 0px;
+		}
+				.twoBlack td:nth-child(8){
+			background-position: -240px 0px;
+		}
+				.twoBlack td:nth-child(9){
+			background-position: -240px 0px;
+		}
+		.twoWhite td{
+background-image: url(chess.png);
+		}
+		.white td{
+			background-image: url(chess.png);
+		}
+		.white td:nth-child(2){
+			background-position: -97px -48px;
+		}
+				.white td:nth-child(3){
+			background-position: -194px -48px;
+		}
+				.white td:nth-child(4){
+			background-position: -143px -48px;
+		}
+				.white td:nth-child(5){
+			background-position: -48px -48px;
+		}
+				.white td:nth-child(6){
+			background-position: 0px -48px;
+		}
+				.white td:nth-child(7){
+			background-position: -143px -48px;
+		}
+				.white td:nth-child(8){
+			background-position: -194px -48px;
+		}
+				.white td:nth-child(9){
+			background-position: -97px -48px;
+		}
+		 .twoWhite td:nth-child(2){
+			background-position: -240px -48px;
+		}
+				 .twoWhite td:nth-child(3){
+			background-position: -240px -48px;
+		}
+				 .twoWhite td:nth-child(4){
+			background-position: -240px -48px;
+		}
+				 .twoWhite td:nth-child(5){
+			background-position: -240px -48px;
+		}
+				 .twoWhite td:nth-child(6){
+			background-position: -240px -48px;
+		}
+				 .twoWhite td:nth-child(7){
+			background-position: -240px -48px;
+		}
+				 .twoWhite td:nth-child(8){
+			background-position: -240px -48px;
+		}
+				 .twoWhite td:nth-child(9){
+			background-position: -240px -48px;
+		}
+		#twoTable{
+						border-bottom:2px solid black;
+						border-top:2px solid black;
+			width: 48px;
+        height: 24px;
+        border-collapse: collapse;
+        background-color: white;
+        text-align: center;
+		}
+		#two1{
+			border-top:2px solid black;
+						border-left:2px solid black;
+			width: 24px;
+        height: 24px;
+        border-collapse: collapse;
+        background-color: white;
+		}
+		#two2{
+			border-top:2px solid black;
+						border-right:2px solid black;
+			width: 24px;
+        height: 24px;
+        border-collapse: collapse;
+        background-color: white;
+		}
+		#two3{
+		border-bottom:2px solid black;
+						border-left:2px solid black;
+			width: 24px;
+        height: 24px;
+        border-collapse: collapse;
+        background-color: white;
+		}
+		#two4{
+		border-bottom:2px solid black;
+						border-right:2px solid black;
+			width: 24px;
+        height: 24px;
+        border-collapse: collapse;
+        background-color: white;
+		}
+		#column{
+			border-left:2px solid black;
+			border-right:2px solid black;
+			width: 24px;
+        height: 48px;
+        border-collapse: collapse;
+        background-color: white;
+        text-align: center;
+		}
+		#one{
+						border-left:2px solid black;
+			border-right:2px solid black;
+			width: 24px;
+        height: 48px;
+        border-collapse: collapse;
+        background-color: white;
+        text-align: center;
+        background-image: none;
+		}
+	</style>
+</head>
+<body>
+	<h1>Шахматы</h1>
+<table>
+		<tr>
+			<th id="two1"></td>
+		    <th id="twoTable">a</td>
+		<th id="twoTable">b</td>
+		<th id="twoTable">c</td>
+		<th id="twoTable">d</td>
+		<th id="twoTable">e</td>
+		<th id="twoTable">f</td>
+		<th id="twoTable">g</td>
+		<th id="twoTable">h</td>
+		<th id="two2"></td>
+	</tr>
+	<tr class="black">
+		<th id="one">8</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<th id="one">8</td>
+	</tr>
+	<tr class="twoBlack">
+		<th id="one">7</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<th id="one">7</td>
+	</tr>
+	<tr>
+		<th id="column">6</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<th id="column">6</td>
+	</tr>
+	<tr>
+		<th id="column">5</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<th id="column">5</td>
+	</tr>
+	<tr>
+		<th id="column">4</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<th id="column">4</td>
+	</tr>
+	<tr>
+		<th id="column">3</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<th id="column">3</td>
+	</tr>
+	<tr class="twoWhite">
+		<th id="one">2</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<th id="one">2</td>
+	</tr>
+	<tr class="white">
+		<th id="one">1</td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<td></td>
+		<th id="one">1</td>
+	</tr>
+		<tr>
+			<th id="two3"></td>
+		    <th id="twoTable">a</td>
+		<th id="twoTable">b</td>
+		<th id="twoTable">c</td>
+		<th id="twoTable">d</td>
+		<th id="twoTable">e</td>
+		<th id="twoTable">f</td>
+		<th id="twoTable">g</td>
+		<th id="twoTable">h</td>
+		<th id="two4"></td>
+	</tr>
+</table>
+</body>
+</html>

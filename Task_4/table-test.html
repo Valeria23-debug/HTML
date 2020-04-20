@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>table-test</title>
+    <style type="text/css">
+        .color {
+            color: #ffffff;
+            background-color: #888888;
+            text-align: center;
+        }
+        
+        .color td {
+            border: none;
+        }
+        
+        td {
+            border-collapse: collapse;
+            border: 2px solid blue
+        }
+        
+        table {
+            border-collapse: collapse;
+            border: 2px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    <table cellpadding="5" cellspacing="0" width="100%">
+        <tr class="color">
+            <td>Название1</td>
+            <td>Название2</td>
+            <td>Ещё название</td>
+            <td>Куча элементов</td>
+            <td>Список1</td>
+            <td>Список2</td>
+        </tr>
+        <tr>
+            <td rowspan="11" align="center">JPMC</td>
+            <td rowspan="5">CST</td>
+            <td rowspan="3">CT</td>
+            <td>ADS</td>
+            <td align="center">1</td>
+            <td align="center">10</td>
+        </tr>
+        <tr>
+            <td>BTO</td>
+            <td align="center">2</td>
+            <td align="center">15</td>
+        </tr>
+        <tr>
+            <td>CSI</td>
+            <td align="center">3</td>
+            <td align="center">16</td>
+        </tr>
+        <tr>
+            <td rowspan="2" align="center">VCT</td>
+            <td>ADS</td>
+            <td align="center">4</td>
+            <td align="center">10</td>
+        </tr>
+        <tr>
+            <td>BTO</td>
+            <td align="center">5</td>
+            <td align="center">15</td>
+        </tr>
+        <tr>
+            <td colspan="3" align="right">Sub Total</td>
+            <td align="center">6</td>
+            <td align="center">15</td>
+        </tr>
+        <tr>
+            <td rowspan="4">CST</td>
+            <td rowspan="3">CT</td>
+            <td>ADS</td>
+            <td align="center">7</td>
+            <td align="center">10</td>
+        </tr>
+        <tr>
+            <td>BTO</td>
+            <td align="center">8</td>
+            <td align="center">15</td>
+        </tr>
+        <tr>
+            <td>CSI</td>
+            <td align="center">9</td>
+            <td align="center">16</td>
+        </tr>
+        <tr>
+            <td align="center">VCT</td>
+            <td>ADS</td>
+            <td align="center">10</td>
+            <td align="center">10</td>
+        </tr>
+        <tr>
+            <td colspan="3" align="right">Sub Total</td>
+            <td align="center">11</td>
+            <td align="center">15</td>
+        </tr>
+    </table>        
+    
+</body>
+</html>
