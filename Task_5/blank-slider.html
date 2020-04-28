@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
+	<title>blank-slider</title>
+</head>
+<style type="text/css">
+body{
+	margin: 0px; 
+}
+	h1, p{
+		font-family: 'Open Sans', sans-serif;
+		color: white;
+		text-align: center;	
+    }
+	img{
+		width: 100%
+	}
+	.row{
+		position: relative;
+	}
+	.row h1{
+        position: absolute;
+        bottom: 250px;
+        width: 100%;
+	}
+	.row p{
+		position: absolute;
+		width: 100%;
+		bottom: 210px;
+	}
+	h1{
+		font-size: 45px;
+        text-decoration: overline;
+	}
+	span{
+		border-bottom: 4px solid white;
+	}
+	p{
+		font-size: 25px;
+	}
+	.row ul{
+		position: absolute;
+		bottom: 30px;
+	}
+	.menu li{
+		display: inline-block;
+        background-color: white;
+        padding: 7px;
+        margin-right: 7px;
+	}
+	#color{
+		background-color: orange;
+	}
+	.block{
+		margin: auto;
+		width: 200px;
+	}
+	.i1{
+		position:absolute;
+		top:185px;
+		left:20px;
+	}
+	.i2{
+		position:absolute;
+		top:185px;
+		right:20px;
+	}
+</style>
+<body>
+<div class="row">
+<img src="slider-img-01.jpg" alt="slider">
+<div class="i1"><a href=""><img src="prev-next-sprite1.png"></a></div>
+<div class="i2"><a href=""><img src="prev-next-sprite2.png"></a></div>
+<h1><span>КОМФОРТНАЯ ОДЕЖДА</span></h1>
+<p>для всех видов спорта</p>
+<div class="block">
+	<ul class="menu">
+         <a href=""><li id="color"></li></a>
+         <a href=""><li></li></a>
+         <a href=""><li></li></a>
+         <a href=""><li></li></a>
+</ul></div>
+</div>
+</body>
+</html>
