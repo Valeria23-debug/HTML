@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>adapt-fotos</title>
+</head>
+<style type="text/css">
+body{
+	margin: -8px;
+}
+	.block{
+		max-width: 1200px;
+		min-width: 320px;
+		margin: auto;
+		display: grid;
+	}
+	img{
+		margin-right: 5px;
+		margin-bottom: 5px;
+		width: 392px;
+		height: auto;
+	}
+	@media(min-width: 980px){
+		.block{
+    grid-template-columns: 1fr 1fr 1fr;
+		}
+	}
+	@media(max-width: 980px){
+		.block{
+    grid-template-columns: 1fr 1fr 1fr;
+		}
+	}
+	@media (max-width: 768px){
+		.block{
+    grid-template-columns: 1fr 1fr;
+		}
+	}
+	@media(max-width: 480px){
+		.block{
+         grid-template-columns: 1fr;
+		}
+	}
+</style>
+<body>
+	<div class="block">
+<div class="bblock"><img src="images.jpg" alt="картинка"></div>
+<div class="bblock"><img src="images.jpg" alt="картинка"></div>
+<div class="bblock"><img src="images.jpg" alt="картинка"></div>
+<div class="bblock"><img src="images.jpg" alt="картинка"></div>
+<div class="bblock"><img src="images.jpg" alt="картинка"></div>
+<div class="bblock"><img src="images.jpg" alt="картинка"></div>
+<div class="bblock"><img src="images.jpg" alt="картинка"></div>
+<div class="bblock"><img src="images.jpg" alt="картинка"></div>
+<div class="bblock"><img src="images.jpg" alt="картинка"></div>
+</div>
+</body>
+</html>
