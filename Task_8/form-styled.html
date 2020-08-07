@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Form-styled.html</title>
+    </head>
+    <style type="text/css">
+        body {
+            background-color: gray;
+            margin: 20px;
+            font-family: Gill Sans, sans-serif;
+        }
+        div {
+            padding: 20px;
+            background-color: white;
+            border: 3px solid #00bcd4;
+            border-radius: 10px;
+        }
+        input {
+            width: 238px;
+            padding: 5px;
+            border-radius: 10px;
+        }
+        .icon1 {
+            background: #fff url("вы.png") no-repeat;
+            border: 1px solid;
+            padding: 21px 60px;
+        }
+        .icon2 {
+            background: url("почта.png") 2px no-repeat;
+            border: 1px solid;
+            padding: 21px 60px;
+        }
+        .icon3 {
+            background: #fff url(телефон.png) 15px no-repeat;
+            border: 1px solid;
+            padding: 21px 60px;
+        }
+
+        .icon4 {
+            background: #fff url("сообщение.png") 14px 3px no-repeat;
+            border: 1px solid;
+            padding: 21px 60px;
+        }
+
+        .fff {
+            color: white;
+            text-align: center;
+            margin-top: -20px;
+            border-bottom: 7px solid;
+        }
+        textarea {
+            border-radius: 20px;
+        }
+        input:focus {
+            border: 2px solid #00bcd4;
+            border-radius: 10px;
+        }
+        .button {
+            text-align: center;
+        }
+        .btn {
+            color: white;
+            background-color: #00bcd4;
+            border: 2px solid #00bcd4;
+        }
+        #block {
+            background-color: #00bcd4;
+            border: 0px;
+            margin: -20px;
+            margin-top: -23px;
+            padding: 0px;
+            font-size: xx-large;
+        }
+        .icon0 {
+            width: 41px;
+            margin: -6px;
+            margin-right: 6px;
+        }
+        .form {
+            display: table-caption;
+        }
+        .form_transform {
+            display: block;
+        }
+        .form_transform input {
+            float: right;
+        }
+        .form_transform p {
+            margin-bottom: 60px;
+        }
+    </style>
+    <body>
+        <div>
+            <div id="block">
+                <p class="fff"><img class="icon0" src="связь.png" alt="связь" /><strong>Обратная связь</strong></p>
+            </div>
+            <form class="form form_transform">
+                <p>
+                    <strong> Имя:</strong>
+                    <input class="icon1" type="text" name="Имя" placeholder="Введите Ваше имя" />
+                </p>
+
+                <p>
+                    <strong>Email:</strong>
+                    <input class="icon2" type="email" name="email" placeholder="Введите адрес Вашей почты" />
+                </p>
+                <p>
+                    <strong>Телефон:</strong>
+                    <input class="icon3" type="tel" name="tel" placeholder="Введите номер телефона" />
+                </p>
+            </form>
+            <p>
+                <strong>Сообщение:</strong><br />
+                <textarea class="icon4" cols="35" rows="4">
+Текст сообщения...
+
+
+                </textarea>
+            </p>
+            <p class="button"><input class="btn" type="submit" name="button" /></p>
+        </div>
+    </body>
+</html>
