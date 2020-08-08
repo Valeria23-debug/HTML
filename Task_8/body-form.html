@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>body-form</title>
+    </head>
+    <style type="text/css">
+        body {
+            background: url("бумага.jpg");
+        }
+        div {
+            margin: auto;
+            margin-top: 200px;
+        }
+        .block1 {
+            width: 350px;
+            height: 220px;
+            background-color: white;
+            box-shadow: 0 8px 10px rgb(0 16 0 / 50%);
+        }
+        .block2 {
+            opacity: 0.5;
+            width: 290px;
+            height: 40px;
+            background-color: gray;
+            margin-top: -240px;
+        }
+        h3 {
+            text-align: center;
+            padding-top: 30px;
+        }
+        .block3 {
+            background-color: #e9271eb8;
+            border-radius: 5px;
+            width: 300px;
+            height: 110px;
+            margin-top: 55px;
+        }
+        p {
+            text-align: center;
+        }
+        form {
+            margin-left: 10px;
+            padding-top: 10px;
+        }
+        input {
+            width: 220px;
+            height: 30px;
+            border: none;
+            background-color: wheat;
+        }
+        [type="text"] {
+            margin-bottom: 3px;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+        }
+        [type="password"] {
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        input:focus {
+            background-color: white;
+        }
+        button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: beige;
+            border: 3px solid #e9271eb8;
+        }
+        .block4 {
+            margin-top: -60px;
+            margin-left: 200px;
+        }
+        button:focus {
+            background-color: white;
+        }
+        button:active {
+            background-color: #b3647f;
+        }
+    </style>
+    <body>
+        <div class="block1">
+            <h3>&mdash;&mdash; АВТОРИЗИРУЙТЕСЬ &mdash;&mdash;</h3>
+        </div>
+        <div class="block2"></div>
+        <div class="block3">
+            <form>
+                <input type="text" name="логин" placeholder="  Логин" />
+                <input type="password" name="пароль" placeholder="  Пароль" />
+                <div class="block4"><button type="button">&rarr;</button></div>
+            </form>
+            <p>Забыли логин или пароль? <a href="">Напомним!</a></p>
+        </div>
+    </body>
+</html>
