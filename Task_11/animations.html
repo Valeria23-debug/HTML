@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>animations</title>
+    </head>
+    <style type="text/css">
+        #container {
+            min-width: 500px;
+            min-height: 300px;
+            border: 2px solid purple;
+        }
+        .one {
+            width: 50px;
+            height: 50px;
+            float: left;
+            border-radius: 20px;
+            border: 2px solid black;
+            background-color: lightblue;
+            animation: one;
+            animation-timing-function: linear;
+            animation-duration: 6s;
+            animation-delay: 0s;
+            margin: 10px;
+            animation-play-state: paused;
+            animation-iteration-count: infinite;
+        }
+        .two {
+            width: 100px;
+            height: 60px;
+            float: left;
+            background-color: black;
+            margin: 10px;
+            animation-name: rotation;
+            animation-delay: 0s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-duration: 6s;
+        }
+        .three {
+            width: 20px;
+            height: 20px;
+            float: left;
+            border-radius: 14px;
+            background: linear-gradient(45deg, green, blue, red);
+            margin: 7px;
+            animation: three;
+            animation-timing-function: linear;
+            animation-duration: 6s;
+            animation-delay: 0s;
+            animation-play-state: paused;
+            animation-iteration-count: infinite;
+        }
+        .four {
+            width: 50px;
+            height: 150px;
+            float: left;
+            border: 3px solid pink;
+            margin: 5px;
+            background-color: white;
+            animation: four;
+            animation-timing-function: linear;
+            animation-duration: 6s;
+            animation-delay: 0s;
+            animation-play-state: paused;
+            animation-iteration-count: infinite;
+        }
+        .five {
+            width: 20px;
+            height: 30px;
+            opacity: 0.5;
+            float: left;
+            background-color: yellow;
+            animation: five;
+            animation-timing-function: linear;
+            animation-duration: 6s;
+            animation-delay: 0s;
+            animation-play-state: paused;
+            animation-iteration-count: infinite;
+        }
+        @keyframes rotation {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes one {
+            0% {
+                transform: none;
+            }
+            50% {
+                transform: skew(20deg, 20deg);
+            }
+            100% {
+                transform: skew(30deg, 30deg);
+            }
+        }
+        @keyframes three {
+            0% {
+                transform: none;
+            }
+            50% {
+                transform: translateX(30px);
+            }
+            100% {
+                transform: translateX(50px);
+            }
+        }
+
+        @keyframes four {
+            0% {
+                transform: none;
+            }
+            50% {
+                transform: scaleX(2);
+                border: 3px solid black;
+            }
+            100% {
+                transform: scaleX(2.5);
+                border: 5px solid pink;
+            }
+        }
+        @keyframes five {
+            0% {
+                transform: none;
+            }
+            50% {
+                transform: rotate(-15deg);
+            }
+            100% {
+                transform: rotate(-30deg);
+                background-color: red;
+            }
+        }
+        #container:hover span {
+            animation-play-state: running;
+        }
+    </style>
+    <body>
+        <div id="container">
+            <span class="one"></span>
+            <span class="two"></span>
+            <span class="three"></span>
+            <span class="four"></span>
+            <span class="five"></span>
+        </div>
+    </body>
+</html>
