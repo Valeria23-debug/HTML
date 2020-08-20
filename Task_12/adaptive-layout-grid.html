@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>grid</title>
+    </head>
+    <style type="text/css">
+        body {
+            margin: -8px;
+        }
+        .grid {
+            grid-template-areas: "header" "aside" "article" "asidee" "footer";
+            display: grid;
+            width: 100%;
+            height: 500px;
+        }
+        .header {
+            background-color: #008cff;
+            grid-area: header;
+            display: grid;
+        }
+        .logo {
+            color: white;
+            background-color: gray;
+            grid-column: 1/2;
+        }
+        .footer {
+            background-color: #75de94;
+            grid-area: footer;
+            display: grid;
+        }
+        .type1 {
+            background-color: #f7d331;
+            grid-area: aside;
+            justify-content: center;
+            display: grid;
+        }
+        .type2 {
+            background-color: #ff00fa;
+            grid-area: asidee;
+            justify-content: center;
+            display: grid;
+        }
+        .content {
+            background-color: #00deff;
+            grid-area: article;
+            padding: 10px;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        .one,
+        .two,
+        .three,
+        .four,
+        .five,
+        .six,
+        .seven,
+        .copy,
+        .content,
+        .logo {
+            display: grid;
+            align-items: center;
+            justify-content: center;
+        }
+        .four {
+            grid-column: 15/16;
+            grid-row: 1/2;
+        }
+        .three {
+            grid-column: 14/15;
+            grid-row: 1/2;
+        }
+        .two {
+            grid-column: 13/14;
+            grid-row: 1/2;
+        }
+        .one {
+            grid-column: 12/13;
+            grid-row: 1/2;
+        }
+        .seven {
+            grid-column: 30/31;
+            grid-row: 1/2;
+        }
+        .six {
+            grid-column: 29/30;
+            grid-row: 1/2;
+        }
+        .five {
+            grid-column: 28/29;
+            grid-row: 1/2;
+        }
+        @media (min-width: 1520px) {
+            .grid {
+                grid-template-columns: 1fr 2fr 1fr;
+                grid-template-rows: 1fr 9fr 1fr;
+                grid-template-areas: "header header header" "aside article asidee" "footer footer footer";
+            }
+        }
+        @media (min-width: 760px) and (max-width: 1519px) {
+            .grid {
+                grid-template-areas: "header header header" "article aside asidee" "footer footer footer";
+                grid-template-columns: 1fr 1fr;
+            }
+            .logo {
+                grid-column: 7/8;
+                grid-row: 1/2;
+            }
+            .one {
+                grid-column: 1/4;
+                grid-row: 2/3;
+            }
+            .two {
+                grid-row: 2/3;
+                grid-column: 4/7;
+            }
+            .three {
+                grid-column: 7/10;
+                grid-row: 2/3;
+            }
+            .four {
+                grid-column: 10/14;
+                grid-row: 2/3;
+            }
+            .content {
+                grid-column: 1/4;
+                grid-row: 3/5;
+                padding: 20px;
+            }
+            .type1 {
+                grid-column: 1/2;
+                grid-row: 5/7;
+                align-items: center;
+            }
+            .type2 {
+                grid-column: 2/4;
+                grid-row: 5/7;
+                align-items: center;
+            }
+            .copy {
+                grid-column: 16/17;
+                grid-row: 2/3;
+            }
+            .five {
+                grid-column: 1/12;
+                grid-row: 4/5;
+            }
+            .six {
+                grid-column: 12/22;
+                grid-row: 4/5;
+            }
+            .seven {
+                grid-column: 22/32;
+                grid-row: 4/5;
+            }
+            .footer {
+                grid-row: 7/9;
+            }
+            .header {
+                grid-row: 1/3;
+            }
+        }
+        @media (max-width: 759px) and (min-width: 375px) {
+            .grid {
+                grid-template-areas: "header header header" "article" "aside" "asidee" "footer footer footer";
+                grid-template-columns: 1fr;
+            }
+            .header {
+                grid-row: 1/6;
+            }
+            .logo {
+                grid-row: 1/2;
+                grid-column: 1/2;
+            }
+            .one {
+                grid-row: 2/3;
+                grid-column: 1/2;
+            }
+            .two {
+                grid-row: 3/4;
+                grid-column: 1/2;
+            }
+            .three {
+                grid-row: 4/5;
+                grid-column: 1/2;
+            }
+            .four {
+                grid-row: 5/6;
+                grid-column: 1/2;
+            }
+            .content {
+                grid-row: 6/7;
+                grid-column: 1/2;
+                padding: 20px;
+            }
+            .type1 {
+                grid-row: 7/8;
+                grid-column: 1/2;
+            }
+            .type2 {
+                grid-row: 8/9;
+                grid-column: 1/2;
+            }
+            .footer {
+                grid-row: 9/13;
+            }
+            .copy {
+                grid-row: 9/10;
+                grid-column: 1/2;
+            }
+            .five {
+                grid-row: 10/11;
+                grid-column: 1/2;
+            }
+            .six {
+                grid-row: 11/12;
+                grid-column: 1/2;
+            }
+            .seven {
+                grid-row: 12/13;
+                grid-column: 1/2;
+            }
+        }
+    </style>
+    <body>
+        <div class="grid">
+            <div class="header">
+                <div class="logo"><span>Logo</span></div>
+                <div class="one"><a href="">Главная</a></div>
+                <div class="two"><a href="">О нас</a></div>
+                <div class="three"><a href="">Продукты</a></div>
+                <div class="four"><a href="">Контакты</a></div>
+            </div>
+            <div class="aside type1">Aside type 1</div>
+            <div class="content">
+                <h1>Begin</h1>
+                Мне стукнуло пятьдесят лет, я был успешным журналистом, мужем, отцом и даже дедом – и при этом безнадежным алкоголиком. Я работал, выполнял разные социальные функции – и постоянно пил, планировал, где и когда буду пить, и
+                скрывал свой алкоголизм. Моя жизнь строилась на вранье. Я старался, чтобы со стороны все выглядело нормальным, хотя огонь всепоглощающей привычки сжигал меня изнутри. Я знал, что вскоре начнут собираться сотрудники и мне
+                придется улыбаться фальшивой улыбкой и шутить. Хотя с виду я был радушным и приветливым, в моей душе все было черно. Мне казалось, что я нахожусь в глубоком колодце с гладкими каменными стенами. Внутри колодца было темно и
+                пусто, как в моей жизни. И выбраться оттуда я не мог.
+                <h2>Morning</h2>
+                Каждое утро, встав с кровати, я наливал себе стакан. Чаще всего после этого меня рвало, но я не сдавался и выпивал еще. А потом еще и еще, пока в желудке не оказывалось достаточно спиртного, чтобы меня перестало трясти.
+            </div>
+            <div class="aside type2">Aside type 2</div>
+            <div class="footer">
+                <div class="copy"><span>&copy;Copyright 2020</span></div>
+                <div class="five"><a href="">Twitter</a></div>
+                <div class="six"><a href="">Vkontakte</a></div>
+                <div class="seven"><a href="">Facebook</a></div>
+            </div>
+        </div>
+    </body>
+</html>
