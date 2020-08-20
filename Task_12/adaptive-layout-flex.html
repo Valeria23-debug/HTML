@@ -1,292 +1,298 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>flex</title>
-</head>
-<style type="text/css">
-	a {
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>flex</title>
+    </head>
+    <style type="text/css">
+        a {
             color: white;
             text-decoration: none;
             display: block;
         }
-        @media (min-width: 1520px){
-        	.flex{
-		display: flex;
-		width: 100%;
-		height: 500px;
-		flex-direction: column;
-	}
-	.header {
-            background-color: #008cff;
-            display: flex;
-            height: 50px;
-            align-items: flex-start;
-            flex-flow: row wrap;
-             justify-content: space-between;
+        @media (min-width: 1520px) {
+            .flex {
+                display: flex;
+                width: 100%;
+                height: 500px;
+                flex-direction: column;
+            }
+            .header {
+                background-color: #008cff;
+                display: flex;
+                height: 50px;
+                align-items: flex-start;
+                flex-flow: row wrap;
+                justify-content: space-between;
+            }
+            .logo {
+                color: white;
+                background-color: gray;
+                width: 150px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .footer {
+                background-color: #75de94;
+                display: flex;
+                height: 50px;
+                align-items: flex-end;
+                justify-content: space-between;
+            }
+            .copy {
+                align-self: center;
+            }
+            .type1 {
+                background-color: #f7d331;
+                width: 300px;
+                display: flex;
+                justify-content: center;
+            }
+            .type2 {
+                background-color: #ff00fa;
+                width: 300px;
+                display: flex;
+                justify-content: center;
+            }
+            .content {
+                background-color: #00deff;
+                align-self: center;
+                justify-content: center;
+                padding: 20px;
+                width: 1000px;
+            }
+            .one,
+            .two,
+            .three,
+            .four {
+                align-self: center;
+                width: 100px;
+            }
+            .five,
+            .six,
+            .seven {
+                align-self: center;
+                width: 100px;
+            }
+            .block,
+            .bblock {
+                display: flex;
+                flex-direction: row;
+                height: 50px;
+            }
+            .bbblock {
+                display: flex;
+                justify-content: space-between;
+            }
         }
-        .logo {
-            color: white;
-            background-color: gray;
-            width: 150px;
-            height: 50px;
-display: flex;
-align-items: center;
-justify-content: center;
+        @media (min-width: 760px) and (max-width: 1519px) {
+            .flex {
+                display: flex;
+                width: 100%;
+                height: 500px;
+                flex-direction: column;
+            }
+            .header {
+                background-color: #008cff;
+                display: flex;
 
-        }
-        .footer {
-            background-color: #75de94;
-             display: flex;
-            height: 50px;
-            align-items: flex-end;
-            justify-content: space-between;
-        }
-        .copy{
-        	align-self: center;
-        }
-         .type1 {
-            background-color: #f7d331;
-         width: 300px;
-        display: flex;
-        justify-content: center;
-            
-        }
-                .type2 {
-            background-color: #ff00fa;
-       width: 300px;
-       display: flex;
-       justify-content: center;
-        
-           
-        }
-        .content {
-            background-color: #00deff;
-            align-self: center;
-            justify-content: center;
-            padding: 20px;
-            width: 1000px;  
+                align-items: center;
+                flex-flow: column wrap;
+            }
 
-                 }
-        .one, .two, .three, .four{
-        	align-self: center;
-        	width: 100px;
+            .logo {
+                color: white;
+                background-color: gray;
+                width: 150px;
+                height: 50px;
+                align-self: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .footer {
+                background-color: #75de94;
+                display: flex;
+                flex-flow: column wrap;
+                align-items: center;
+            }
+            .copy {
+                align-self: center;
+                width: 150px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .type1 {
+                background-color: #f7d331;
+                width: 50%;
+                display: flex;
+                height: 50px;
+                justify-content: center;
+                order: 2;
+                align-items: center;
+            }
+            .type2 {
+                background-color: #ff00fa;
+                width: 50%;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                order: 3;
+                align-items: center;
+            }
+            .content {
+                background-color: #00deff;
+                align-self: center;
+                justify-content: center;
+                width: 100%;
+                order: 1;
+            }
+            .one,
+            .two,
+            .three,
+            .four {
+                align-self: center;
+            }
+            .five,
+            .six,
+            .seven {
+                align-self: center;
+            }
+            .block {
+                display: flex;
+                flex-direction: row;
+                height: 50px;
+                width: 100%;
+                justify-content: space-around;
+            }
+            .bblock {
+                display: flex;
+                flex-direction: row;
+                height: 50px;
+                width: 100%;
+                justify-content: space-around;
+            }
+            .bbblock {
+                display: flex;
+                justify-content: space-between;
+                flex-flow: row wrap;
+            }
         }
-        .five, .six, .seven{
-        	align-self: center;
-        	width: 100px;
-        }
-        .block, .bblock{
-        	display: flex;
-        	flex-direction: row;
-        	height: 50px;     	
-        }
-        .bbblock{
-        	display: flex;
-        	justify-content: space-between;
+        @media (min-width: 375px) and (max-width: 759px) {
+            .flex {
+                display: flex;
+                width: 100%;
+                height: 500px;
+                flex-direction: column;
+            }
+            .header {
+                background-color: #008cff;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                flex-flow: column wrap;
+            }
 
+            .logo {
+                color: white;
+                background-color: gray;
+                width: 150px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .footer {
+                background-color: #75de94;
+                display: flex;
+                flex-flow: column wrap;
+                align-items: center;
+                justify-content: space-around;
+            }
+            .copy {
+                width: 150px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .type1 {
+                background-color: #f7d331;
+                display: flex;
+                height: 50px;
+                justify-content: center;
+                order: 2;
+                align-items: center;
+            }
+            .type2 {
+                background-color: #ff00fa;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                order: 3;
+                align-items: center;
+            }
+            .content {
+                background-color: #00deff;
+                width: 100%;
+                order: 1;
+            }
+            .one,
+            .two,
+            .three,
+            .four,
+            .five,
+            .six,
+            .seven {
+                align-self: center;
+                height: 50px;
+                display: flex;
+                align-items: center;
+            }
+            .block,
+            .bblock,
+            .bbblock {
+                display: flex;
+                flex-flow: column wrap;
+            }
         }
-        }
-        @media (min-width: 760px) and (max-width: 1519px){
-        		.flex{
-		display: flex;
-		width: 100%;
-		height: 500px;
-		flex-direction: column;
-	}
-	.header {
-            background-color: #008cff;
-            display: flex;
-            
-            align-items: center;
-            flex-flow: column wrap;
-        }
-
-        .logo {
-            color: white;
-            background-color: gray;
-            width: 150px;
-            height: 50px;
-            align-self: center;
-display: flex;
-align-items: center;
-justify-content: center;
-
-        }
-        .footer {
-            background-color: #75de94;
-             display: flex;
-            flex-flow: column wrap;
-            align-items: center;
-            
-        }
-        .copy{
-        	align-self: center;
-        	width: 150px;
-            height: 50px;
-            display: flex;
-align-items: center;
-justify-content: center;
-
-        }
-         .type1 {
-            background-color: #f7d331;
-         width: 50%;
-        display: flex;
-        height: 50px;
-        justify-content: center;
-            order: 2;
-            align-items: center;
-        }
-                .type2 {
-            background-color: #ff00fa;
-       width: 50%;
-       height: 50px;
-       display: flex;
-       justify-content: center;
-        order: 3;
-        align-items: center;
-           
-        }
-        .content {
-            background-color: #00deff;
-            align-self: center;
-            justify-content: center;
-            width: 100%;  
-order: 1;
-                 }
-        .one, .two, .three, .four{
-        	align-self: center;
-        	
-        }
-        .five, .six, .seven{
-        	align-self: center;
-        	
-        }
-        .block{
-        	display: flex;
-        	flex-direction: row;
-        	height: 50px;
-        	width: 100%;
-        	justify-content: space-around;
-
-        	} .bblock{
-        	display: flex;
-        	flex-direction: row;
-        	height: 50px; 
-        	width: 100%;
-        	justify-content: space-around;    	
-        }
-        .bbblock{
-        	display: flex;
-        	justify-content: space-between;
-        	flex-flow: row wrap;
-
-        }
-
-        }
-        @media (min-width: 375px) and (max-width: 759px){
-		.flex{
-		display: flex;
-		width: 100%;
-		height: 500px;
-		flex-direction: column;
-	}
-	.header {
-            background-color: #008cff;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-flow: column wrap;
-        }
-
-        .logo {
-            color: white;
-            background-color: gray;
-            width: 150px;
-            height: 50px;
-display: flex;
-align-items: center;
-justify-content: center;
-
-        }
-        .footer {
-            background-color: #75de94;
-             display: flex;
-            flex-flow: column wrap;
-            align-items: center;
-            justify-content: space-around;
-        }
-        .copy{
-        	width: 150px;
-            height: 50px;
-            display: flex;
-align-items: center;
-justify-content: center;
-
-        }
-         .type1 {
-            background-color: #f7d331;
-        display: flex;
-        height: 50px;
-        justify-content: center;
-            order: 2;
-            align-items: center;
-        }
-                .type2 {
-            background-color: #ff00fa;
-       height: 50px;
-       display: flex;
-       justify-content: center;
-        order: 3;
-        align-items: center;
-        }
-        .content {
-            background-color: #00deff; 
-            width: 100%;  
-            order: 1;
-                 }
-        .one, .two, .three, .four,
-        .five, .six, .seven{
-        	align-self: center;
-        	height: 50px;
-        	display: flex;
-        	align-items: center;
-        }
-        .block, .bblock,
-        .bbblock{
-        	display: flex;
-        	flex-flow: column wrap;
-        }
-        }
-</style>
-<body>
-<div class="flex">
+    </style>
+    <body>
+        <div class="flex">
             <div class="header">
-
                 <div class="logo"><span>Logo</span></div>
-               <div class="block"> <div class="one"><a href="">Главная</a></div>
-                <div class="two"><a href="">О нас</a></div>
-                <div class="three"><a href="">Продукты</a></div>
-                <div class="four"><a href="">Контакты</a></div></div>
+                <div class="block">
+                    <div class="one"><a href="">Главная</a></div>
+                    <div class="two"><a href="">О нас</a></div>
+                    <div class="three"><a href="">Продукты</a></div>
+                    <div class="four"><a href="">Контакты</a></div>
+                </div>
             </div>
-           <div class="bbblock"> <div class="aside type1">Aside type 1</div>
-            <div class="content">
-                <h1>Begin</h1>
-                Мне стукнуло пятьдесят лет, я был успешным журналистом, мужем, отцом и даже дедом – и при этом безнадежным алкоголиком. Я работал, выполнял разные социальные функции – и постоянно пил, планировал, где и когда буду пить, и
-                скрывал свой алкоголизм. Моя жизнь строилась на вранье. Я старался, чтобы со стороны все выглядело нормальным, хотя огонь всепоглощающей привычки сжигал меня изнутри. Я знал, что вскоре начнут собираться сотрудники и мне
-                придется улыбаться фальшивой улыбкой и шутить. Хотя с виду я был радушным и приветливым, в моей душе все было черно. Мне казалось, что я нахожусь в глубоком колодце с гладкими каменными стенами. Внутри колодца было темно и
-                пусто, как в моей жизни. И выбраться оттуда я не мог.
-                <h2>Morning</h2>
-                Каждое утро, встав с кровати, я наливал себе стакан. Чаще всего после этого меня рвало, но я не сдавался и выпивал еще. А потом еще и еще, пока в желудке не оказывалось достаточно спиртного, чтобы меня перестало трясти.
+            <div class="bbblock">
+                <div class="aside type1">Aside type 1</div>
+                <div class="content">
+                    <h1>Begin</h1>
+                    Мне стукнуло пятьдесят лет, я был успешным журналистом, мужем, отцом и даже дедом – и при этом безнадежным алкоголиком. Я работал, выполнял разные социальные функции – и постоянно пил, планировал, где и когда буду пить,
+                    и скрывал свой алкоголизм. Моя жизнь строилась на вранье. Я старался, чтобы со стороны все выглядело нормальным, хотя огонь всепоглощающей привычки сжигал меня изнутри. Я знал, что вскоре начнут собираться сотрудники и
+                    мне придется улыбаться фальшивой улыбкой и шутить. Хотя с виду я был радушным и приветливым, в моей душе все было черно. Мне казалось, что я нахожусь в глубоком колодце с гладкими каменными стенами. Внутри колодца было
+                    темно и пусто, как в моей жизни. И выбраться оттуда я не мог.
+                    <h2>Morning</h2>
+                    Каждое утро, встав с кровати, я наливал себе стакан. Чаще всего после этого меня рвало, но я не сдавался и выпивал еще. А потом еще и еще, пока в желудке не оказывалось достаточно спиртного, чтобы меня перестало трясти.
+                </div>
+                <div class="aside type2">Aside type 2</div>
             </div>
-            <div class="aside type2">Aside type 2</div></div>
             <div class="footer">
                 <div class="copy"><span>&copy;Copyright 2020</span></div>
-                <div class="bblock"><div class="five"><a href="">Twitter</a></div>
-                <div class="six"><a href="">Vkontakte</a></div>
-                <div class="seven"><a href="">Facebook</a></div></div>
+                <div class="bblock">
+                    <div class="five"><a href="">Twitter</a></div>
+                    <div class="six"><a href="">Vkontakte</a></div>
+                    <div class="seven"><a href="">Facebook</a></div>
+                </div>
             </div>
         </div>
-</body>
+    </body>
 </html>
